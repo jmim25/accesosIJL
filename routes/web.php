@@ -30,6 +30,7 @@ Auth::routes();
 
 
 Route::middleware('auth')->group(function(){
+
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
     Route::get('/accesos', function() {
@@ -49,6 +50,6 @@ Route::middleware('auth')->group(function(){
         return view('accesos_create');
     });
 
-
+    Route::post('/accesos/store', [App\Http\Controllers\AccesoController::class, 'store']);
 
 });

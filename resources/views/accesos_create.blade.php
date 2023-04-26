@@ -30,8 +30,23 @@
 {{--                                <option>Bachillerato</option>--}}
 {{--                                <option>API</option>--}}
 {{--                            </x-adminlte-select>--}}
-                            <x-adminlte-select2 name="optionsVehicles" fgroup-class="col-md-6" label="Área" data-placeholder="Select an option...">
-                                <x-adminlte-options :options="['Dirección general','Administración','Tesoreria','Sistemas','Recursos Humanos','Admisiones','Preescolar','Primaria','Secundaria','Bachillerato','API',]" empty-option/>
+                            <x-adminlte-select2 name="area" fgroup-class="col-md-6" label="Área" data-placeholder="Seleccione una opcion...">
+                                <?php
+                                    $datos = array(
+                                        'Dirección general'  => 'Dirección general',
+                                        'Administración' => 'Administración',
+                                        'Tesoreria' => 'Tesoreria',
+                                        'Sistemas' => 'Sistemas',
+                                        'Recursos Humanos'  => 'Recursos Humanos',
+                                        'Admisiones' => 'Admisiones',
+                                        'Preescolar' => 'Preescolar',
+                                        'Primaria' => 'Primaria',
+                                        'Secundaria' => 'Secundaria',
+                                        'Bachillerato' => 'Bachillerato',
+                                        'API' => 'API',
+                                    );
+                                ?>
+                                <x-adminlte-options :options="$datos" empty-option/>
                             </x-adminlte-select2>
 
                         </div>

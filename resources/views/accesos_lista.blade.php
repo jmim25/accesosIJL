@@ -13,7 +13,7 @@
                         <td>{{ $acceso->id }}</td>
                         <td>{{ $acceso->nombre }}</td>
                         <td>{{ $acceso->area }}</td>
-                        <td>{{ $acceso->descripcion }}</td>
+                        <td>{{ substr($acceso->descripcion, 0, 20) }}...</td>
                     </tr>
                 @endforeach
             </x-adminlte-datatable>
